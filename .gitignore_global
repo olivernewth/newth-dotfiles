@@ -1,0 +1,70 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Python
+*.py[cod]
+__pycache__/
+*.so
+
+# Java
+*.class
+*.log
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# OS generated files
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
