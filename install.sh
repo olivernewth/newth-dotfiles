@@ -26,6 +26,20 @@ print_header() {
   echo
 }
 
+# Colorful ASCII Art Function
+print_ascii_art() {
+  echo -e "${BLUE}▗▄▖ █ ▄ ▄   ▄ ▗▞▀▚▖ ▄▄▄ ▄▄▄         "
+  echo -e "${BLUE}▐▌ ▐▌█ ▄ █   █ ▐▛▀▀▘█   ▀▄▄          "
+  echo -e "${BLUE}▐▌ ▐▌█ █  ▀▄▀  ▝▚▄▄▖█   ▄▄▄▀         "
+  echo -e "${BLUE}▝▚▄▞▘█ █                             "
+  echo -e "${RED}▗▄▄▄   ▄▄▄     ■  ▗▞▀▀▘▄ █ ▗▞▀▚▖ ▄▄▄ "
+  echo -e "${RED}▐▌  █ █   █ ▗▄▟▙▄▖▐▌   ▄ █ ▐▛▀▀▘▀▄▄  "
+  echo -e "${RED}▐▌  █ ▀▄▄▄▀   ▐▌  ▐▛▀▘ █ █ ▝▚▄▄▖▄▄▄▀ "
+  echo -e "${RED}▐▙▄▄▀         ▐▌  ▐▌   █ █           "
+  echo -e "${RED}              ▐▌                     "
+  echo -e "${RESET}"
+}
+
 # Function to check if a command exists
 command_exists() {
   command -v "$1" >/dev/null 2>&1
@@ -121,8 +135,13 @@ install_prerequisites() {
   install_node
 }
 
-# Main menu
-print_header "Oliver's Dotfiles Installation"
+# Main script
+clear
+print_ascii_art
+print_color "CYAN" "Welcome to Oliver's Dotfiles Installer!"
+echo
+
+print_header "Dotfiles Installation"
 echo "What would you like to do?"
 print_color "CYAN" "1) Install prerequisites (Homebrew, Git, Node.js)"
 print_color "CYAN" "2) Create symlinks"
@@ -130,6 +149,7 @@ print_color "CYAN" "3) Install Homebrew packages"
 print_color "CYAN" "4) Install npm global packages"
 print_color "CYAN" "5) Do all of the above"
 print_color "CYAN" "6) Exit"
+echo
 read -p "Enter your choice (1-6): " choice
 
 case $choice in
@@ -167,5 +187,5 @@ case $choice in
 esac
 
 print_header "Installation Complete"
-print_color "GREEN" "Thank you for using the dotfiles installer!"
+print_color "GREEN" "Thank you for using Oliver's dotfiles installer!"
 exit 0
