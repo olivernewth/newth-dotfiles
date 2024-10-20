@@ -1,0 +1,17 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Oliver Newth
+	email = 5912894+olivernewth@users.noreply.github.com
+	signingkey = ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCrV21BuUXmOsOAKtPGM+tTwsdx2dDM6EhvCxcK60ySlCLWxCZ4WCvwHV96ZXerOdKgmbHVmrm6zyW31JTVhddVvIiMcoa890D4qfEeQRarWyipNfx6adOxbvKnC72ghIO3R1H4BfrUWkyw3AE0jraQxDqwIKsZDQ5JDapBoAzgxCHJ5elMdia9y2VrGGDWjWxadrfBf4DJN8896YfV3UUAE5v8knLAuFqGSUDXg2/Y/yi4aGw4jD0ua3d5cAoAMjWTgjPfj4/7kNTCUsUAgr63oqEAnpH7UC9LX0A4OXVUsArzAaXG823DibYCtanGz+jqF6W3if512Wff9zEpflpg4wSvDfYpwoVwzKny0AowS1+gCTPX2lKyjTdt2AmdIajA3Cx/xiSWQXa99Bfzh2cmZkP3MtS5xt4ENWZamRXRERhntu+e6lgBkRIxEeerabRvHDk6bsdDJZYGwHGqGB/npHRWEcFj0EPCgECNW0EzgVPpZxKybQP9Hg5Y8rpyvsNvoDv8ng0YDDv4uRKcvlI+3nDivnDUFhy8EKmR2f8Ve3EuEqILdUzluhKGI+LxG8eDBeY11u+ufhy9rUmmZEcZpe7BPpH55+Z/IJESiJ1oEhiyZ9X2G5YGOcFpMe++a7rJr6x71oGTSECG8OTLfEXjGiSok0RrumiZJ+wqi3PqAw==
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true
+[init]
+	defaultBranch = main
