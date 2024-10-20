@@ -21,5 +21,6 @@ link_file() {
 # Symlink configurations relative to the dotfiles directory
 link_file "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
 link_file "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
+link_file "$DOTFILES_DIR/.hyper.js" "$HOME/.hyper.js"
 
 echo "Symlinks created successfully!"
