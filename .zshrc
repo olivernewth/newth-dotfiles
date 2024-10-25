@@ -110,12 +110,7 @@ setopt CORRECT_ALL
 # Defer loading of non-essential plugins
    zsh-defer source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
    zsh-defer source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-# Set the initial working directory (moved to the end for faster startup)
-if [[ -d "$HOME/GitHub" ]]; then
-    cd "$HOME/GitHub"
-else
-    echo "Warning: ~/GitHub directory does not exist."
-fi
+
 
 # Profiling (comment out when not needed)
 # zprof

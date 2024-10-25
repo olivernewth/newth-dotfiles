@@ -5,7 +5,7 @@ module.exports = {
     updateChannel: "stable",
 
     // Font configuration
-    fontSize: 14,
+    fontSize: 13,
     fontFamily:
       'Hack Nerd Font, "FiraCode Nerd Font Propo", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
     fontWeight: "400",
@@ -41,7 +41,7 @@ module.exports = {
     // CSS customization
     css: `
       .term_fit:not(.term_term) {
-        opacity: 0.6;
+        opacity: ;
       }
       .term_fit.term_active {
         opacity: 1;
@@ -97,6 +97,14 @@ module.exports = {
 
     // Web links activation key
     webLinksActivationKey: "meta",
+
+    // Add rounded corners to the terminal
+    css: `
+      .hyper_main {
+        border-radius: 10px;
+        overflow: hidden;
+      }
+    `,
 
     // Ligature support
     disableLigatures: false,
