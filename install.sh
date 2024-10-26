@@ -84,15 +84,19 @@ install_git() {
   fi
 }
 
-# Function to create symlink if it doesn't already exist
+# Function to create symlink, replacing if it already exists
 link_file() {
   local source="$1"
   local target="$2"
 
   if [ -L "$target" ]; then
-    print_color "CYAN" "Symlink already exists for $target"
+    rm "$target"
+    ln -s "$source" "$target"
+    print_color "YELLOW" "Replaced existing symlink: $target -> $source"
   elif [ -e "$target" ]; then
-    print_color "YELLOW" "File $target exists, skipping."
+    mv "$target" "$target.backup"
+    ln -s "$source" "$target"
+    print_color "YELLOW" "Backed up existing file and created symlink: $target -> $source"
   else
     ln -s "$source" "$target"
     print_color "GREEN" "Created symlink: $target -> $source"
